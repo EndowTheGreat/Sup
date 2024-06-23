@@ -113,7 +113,6 @@ fn main() -> Result<(), Box<dyn Error>> {
     let session = setup_ssh_session(&config)?;
     let skip: Vec<PathBuf> = args.skip.split(',').map(PathBuf::from).collect();
     let sftp = session.sftp()?;
-
     upload_sftp(
         &session,
         &sftp,
