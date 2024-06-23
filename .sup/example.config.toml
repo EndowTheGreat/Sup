@@ -1,0 +1,3 @@
+username = "root"
+key_file = "/home/user/.ssh/id_rsa.pub"
+server = "ssh.example.com"

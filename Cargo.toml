@@ -1,0 +1,19 @@
+[package]
+name = "sup"
+version = "0.1.0"
+edition = "2021"
+repository = "https://gitlab.com/EndowTheGreat/sup"
+description = "An easy-to-use Linux CLI aimed at simplifying local:remote file syncing."
+
+[dependencies]
+ssh2 = "0.9.4"
+crossbeam = "0.8"
+clap = { version = "4.5.7", features = ["derive"] }
+toml = "0.8.14"
+inline_colorization = "0.1.6"
+dirs = "5.0.1"
+
+[profile.release]
+opt-level = "s"
+lto = true
+strip = true
